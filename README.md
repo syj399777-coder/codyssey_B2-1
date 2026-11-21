@@ -46,7 +46,8 @@ python -m budget_app <command> [options]
 python -m budget_app add
 ```
 
-[사진1]
+<img width="479" height="127" alt="1" src="https://github.com/user-attachments/assets/4b26dbad-2b6e-4c87-8cae-4af1b0e90664" />
+
 
 ---
 
@@ -60,7 +61,8 @@ python -m budget_app budget set --month 2026-11 --amount 20000
 python -m budget_app summary --month 2026-11 --top 3
 ```
 
-[사진2]
+<img width="781" height="154" alt="2" src="https://github.com/user-attachments/assets/a959c6e4-77de-43f2-acbb-528be9b7f396" />
+
 
 ---
 
@@ -75,7 +77,8 @@ python -m budget_app summary --month 2026-11 --top 3
 python -m budget_app delete --id TX-000001
 ```
 
-[사진3]
+<img width="668" height="186" alt="3" src="https://github.com/user-attachments/assets/50c39090-724e-4eda-bb42-85e56cbe33f8" />
+
 
 ---
 
@@ -90,7 +93,8 @@ python -m budget_app category add --name snack
 python -m budget_app category list
 ```
 
-[사진4]
+<img width="612" height="198" alt="4" src="https://github.com/user-attachments/assets/6252f8b1-0d25-48c5-95b8-41fb2d87507e" />
+
 
 ---
 
@@ -102,7 +106,8 @@ python -m budget_app category list
 python -m budget_app add
 ```
 
-[사진5]
+<img width="457" height="128" alt="5" src="https://github.com/user-attachments/assets/c75327f3-9330-4bcf-8586-0c802393c338" />
+
 
 ---
 
@@ -117,7 +122,8 @@ python -m budget_app category remove --name salary
 echo \$?
 ```
 
-[사진6]
+<img width="753" height="128" alt="6" src="https://github.com/user-attachments/assets/5302297b-3a47-49b2-b3ef-e1872696e692" />
+
 
 ---
 
@@ -144,7 +150,8 @@ echo \$?
 #### Q. 프로그램 재실행 후에도 거래/카테고리/예산 데이터가 유지되는가? (저장 파일 3개 이상)
 - 기본 `./data` 폴더(`--data-dir` 옵션으로 변경 가능) 아래에 `transactions.jsonl`, `categories.jsonl`, `budgets.jsonl` 등 3개 이상의 파일로 분리해 영구 저장하므로, 프로그램 종료 후 재실행해도 거래·카테고리·예산 데이터가 유지됩니다.
 
-[사진 Q1-6]
+<img width="725" height="145" alt="Q1-6" src="https://github.com/user-attachments/assets/f9f9d833-a94d-4cda-8a22-91d2ac68dc0c" />
+
 
 ### 재실행 후 데이터 유지 검증 (`ls -la data`, `list`, `category list`, `summary`)
 - **저장 파일 3종 유지 (`ls -la data`):** `data/budgets.jsonl`(38B), `data/categories.jsonl`(109B), `data/transactions.jsonl`(274B) 파일이 모두 존재하며 데이터가 기록되어 있음을 확인했습니다.
@@ -166,7 +173,7 @@ echo \$?
 #### Q. 잘못된 입력/파일 오류에서 스택트레이스 없이 오류 메시지와 해결 힌트를 출력하는가?
 - 잘못된 입력값이나 존재하지 않는 ID, 파일 관련 예외가 발생하면 스택트레이스를 그대로 노출하지 않고 원인(`오류`)과 조치 방법(`힌트`)을 출력하도록 처리했습니다.
 
-[사진 Q1-6]
+<img width="668" height="336" alt="Q1-2" src="https://github.com/user-attachments/assets/60eaad63-7a10-4f6d-811d-a515c383fa42" />
 - **오류 메시지 및 해결 힌트 출력:** 존재하지 않는 ID 삭제(`TX-999999`)나 사용 중인 카테고리 삭제(`salary`) 등의 오류 상황에서 스택트레이스 대신 원인(`[오류]`)과 해결 방안(`[힌트]`)이 출력됨을 확인했습니다.
 
 #### Q. 오류 상황에서 종료 코드가 0이 아님을 확인할 수 있는가?
